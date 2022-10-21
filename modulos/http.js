@@ -7,6 +7,7 @@ function router(req, res) {
     console.log(req.url);
     switch (req.url) {
         case '/hola':
+            let saludo = hola();
             res.write('hola que tal');
             res.end();
             break;
@@ -19,6 +20,10 @@ function router(req, res) {
     // res.writeHead(201, { 'Content-Type': 'text/plain'});
     // res.write('uasr http en node');
     // res.end();
+}
+
+function hola() {
+    return 'hola que hace..'
 }
 
 console.log("Escuchando http puerto 3001");
